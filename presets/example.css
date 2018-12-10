@@ -1,3 +1,11 @@
+/*
+	This example requires variables to be set as:
+		"*color0-15:	#color"
+	as there is an asterisk before each color.
+
+	To reuse variables from the URxvt variables, you could substitute these variables with:
+		"${URxvt.color0-15}"
+*/
 :root {
 	--color0:	${*color0};
 	--color1:	${*color1};
