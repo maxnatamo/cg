@@ -27,8 +27,8 @@ def init( i ):
     xparser.parse_file( i )
     
     # To make sure the necessary folders exist.
-    os.system("mkdir -p " + config.output_folder + " >/dev/null")
-    os.system("mkdir -p " + config.presets_folder + " >/dev/null")
+    os.system("mkdir -p " + os.path.join( xparser.cwd, config.output_folder ) + " >/dev/null")
+    os.system("mkdir -p " + os.path.join( xparser.cwd, config.presets_folder ) + " >/dev/null")
 
     # Python's file operations do not support tilde (~), so they can be replaced with the users home directory ($HOME).
     config.presets_folder = config.presets_folder.replace( "~", os.path.expanduser("~") )

@@ -1,11 +1,13 @@
 import os
 import subprocess
+import config
 
 result = {}
 cwd = os.path.dirname( os.path.realpath( __file__ ) )
 
 def parse_file(f):
-    subprocess.call("xrdb -merge " + f, shell = True)
+    if not config.omit_xrdb:
+        subprocess.call("xrdb -merge " + f, shell = True)
     res = os.popen("xrdb -query").read()[:-1].split("\n")
 
     for i in res:

@@ -9,10 +9,13 @@ output_folder       = "~/.cache/cg/"
 # Default .Xresources config file, if no file is specified.
 default             = "~/.Xresources"
 
+# Omit xrdb-ing the default X-file.
+omit_xrdb           = True
+
 # Log level
 # Values: 0-2
 #    0 (none)
 #    1 (warning)
 #    2 (log)
 # Default value: 1
-log_level           = 1
+log_level           = 2
